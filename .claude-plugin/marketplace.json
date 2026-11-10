@@ -1,0 +1,6 @@
+{
+  "name": "bitsenbytes-transcription",
+  "owner": { "name": "BitsEnBytesICT" },
+  "description": "Voice dictation for Claude Code through your own OpenRouter speech-to-text models.",
+  "plugins": [{ "name": "openrouter-dictation", "source": "./" }]
+}

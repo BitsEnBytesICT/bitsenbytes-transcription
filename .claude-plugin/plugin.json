@@ -1,0 +1,36 @@
+{
+  "name": "openrouter-dictation",
+  "version": "0.1.0",
+  "description": "Dictate into the prompt box: records your microphone and transcribes it with your own OpenRouter key and the speech-to-text model you pick (ElevenLabs Scribe v2 by default).",
+  "types": "./types/index.d.ts",
+  "userConfig": {
+    "apiKey": {
+      "type": "string",
+      "title": "OpenRouter API key",
+      "description": "Your OpenRouter key (sk-or-...). You can also paste it into the dictation bar, or set the OPENROUTER_API_KEY environment variable.",
+      "sensitive": true,
+      "required": false
+    },
+    "model": {
+      "type": "string",
+      "title": "Default transcription model",
+      "description": "OpenRouter model id used until you pick another in the dictation bar.",
+      "default": "elevenlabs/scribe-v2",
+      "required": false
+    },
+    "speakers": {
+      "type": "boolean",
+      "title": "Label speakers",
+      "description": "Start with speaker recognition on: the transcript is split into Speaker 1, Speaker 2, ... on models that support it.",
+      "default": false,
+      "required": false
+    },
+    "language": {
+      "type": "string",
+      "title": "Default language",
+      "description": "ISO-639-1 code such as en or nl; leave empty to auto-detect.",
+      "default": "",
+      "required": false
+    }
+  }
+}
