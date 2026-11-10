@@ -35,7 +35,7 @@ claude plugin install openrouter-dictation --marketplace BitsEnBytesICT/bitsenby
 
 ## First use
 
-1. In a new session, look just **above the prompt box**. You'll see a mic icon and a chevron (`›`).
+1. In a new session, send your first message, then look just **above the prompt box**. (The bar can't appear before the first message; see Troubleshooting.) You'll see a mic icon and a chevron (`›`).
 2. Click the **chevron** to open the settings drawer, then click the **key** icon and paste your OpenRouter key. Press Enter to save. It's kept on this computer, so you only do this once. If you click the mic without a key, the drawer opens on the key field for you.
 3. Pick a **model** in the drawer if you want something other than ElevenLabs Scribe v2, and a **language** if auto-detect gets it wrong.
 4. Click the **mic** and talk. The bar turns into a moving waveform.
@@ -63,6 +63,7 @@ Use any one of these. The first one found wins:
 
 ## Troubleshooting
 
+- **The bar only shows up after my first message in a new chat.** That's how the desktop app works: a new chat doesn't start Claude Code until you send something, and plugins run inside it. Send any short message first, or type `/dictate` as your first message to start the chat and a recording in one go. After that the bar stays for the whole chat.
 - **I don't see the bar.** Start a new session in the **Code** tab, or type `/reload-plugins`. Make sure the plugin is turned on under **+**, then **Plugins**. The bar hides while a survey or question card is showing above the prompt box.
 - **It says recording needs Windows.** It does. On a Mac or Linux machine, the plugin installs but can't record.
 - **Nothing was recorded.** Check that Windows lets apps use the microphone: Settings, then Privacy & security, then Microphone. Also check that the right input device is the default.
